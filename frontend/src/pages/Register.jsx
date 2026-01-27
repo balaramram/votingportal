@@ -46,7 +46,7 @@ const Register = () => {
 
     // 1. URL-ai registration endpoint-ku maathunga (Ex: /api/auth/register)
     // 2. Data anuppa method kandippa "POST"-ah irukkanum
-    const res = await fetch(`https://votingportal-backend.onrender.com/api/user/register`, {
+    const res = await fetch(`https://votingportal-v8js.onrender.com/api/user/register`, {
       method: "POST", 
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(payload)
@@ -80,7 +80,7 @@ const handleSendOTP = async () => {
   if (!formData.email) return alert("Please enter email first!");
   setLoading(true);
   try {
-    const res = await fetch('https://votingportal-backend.onrender.com/api/send-otp', {
+    const res = await fetch('https://votingportal-v8js.onrender.com/api/send-otp', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email: formData.email }),
@@ -103,7 +103,7 @@ const handleSendOTP = async () => {
 // 2. Verify OTP Request
 const handleVerifyOTP = async () => {
   try {
-    const res = await fetch('https://votingportal-backend.onrender.com/api/verify-otp', {
+    const res = await fetch('https://votingportal-v8js.onrender.com/api/verify-otp', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email: formData.email, otp: otpInput })

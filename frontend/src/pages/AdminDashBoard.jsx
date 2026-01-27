@@ -10,7 +10,7 @@ const AdminDashboard = () => {
 
   const fetchPolls = async () => {
     try {
-      const res = await fetch("https://votingportal-backend.onrender.com/api/voting", {
+      const res = await fetch("https://votingportal-v8js.onrender.com/api/voting", {
         headers: { "Authorization": `Bearer ${localStorage.getItem("adminToken")}` }
       });
       const data = await res.json();
@@ -40,7 +40,7 @@ const AdminDashboard = () => {
     const pollData = { ...newPoll, options: filteredOptions, createdBy: adminId };
 
     try {
-      const res = await fetch("https://votingportal-backend.onrender.com/api/voting/create", {
+      const res = await fetch("https://votingportal-v8js.onrender.com/api/voting/create", {
         method: "POST",
         headers: { 
           "Content-Type": "application/json",
@@ -64,7 +64,7 @@ const AdminDashboard = () => {
     if (window.confirm("Are you sure you want to delete this poll? 🗑️")) {
       try {
         const token = localStorage.getItem("adminToken");
-        const res = await fetch(`https://votingportal-backend.onrender.com/api/voting/delete-poll/${pollId}`, {
+        const res = await fetch(`https://votingportal-v8js.onrender.com/api/voting/delete-poll/${pollId}`, {
           method: "DELETE",
           headers: { "Authorization": `Bearer ${token}` }
         });
