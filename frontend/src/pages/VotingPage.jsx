@@ -29,7 +29,7 @@ const VotingPage = () => {
       const token = localStorage.getItem("token");
       if (!token) return;
 
-      const res = await fetch(`http://localhost:5000/api/voting`, {
+      const res = await fetch(`https://votingportal-backend.onrender.com/api/voting`, {
         method: "GET", // Kandippa method specify pannunga
         headers: { 
           "Authorization": `Bearer ${token}`, // ✨ Idhu dhaan Backend-la req.headers.authorization-ku pogum
@@ -55,7 +55,7 @@ const VotingPage = () => {
 
     const token = localStorage.getItem("token");
     try {
-      const res = await fetch("http://localhost:5000/api/voting/vote", {
+      const res = await fetch("https://votingportal-backend.onrender.com/api/voting/vote", {
         method: "POST",
         headers: { 
           "Content-Type": "application/json",
