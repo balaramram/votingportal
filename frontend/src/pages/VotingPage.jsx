@@ -29,7 +29,7 @@ const VotingPage = () => {
       const token = localStorage.getItem("token");
       if (!token) return;
 
-      const res = await fetch(`https://votingportal-v8js.onrender.com/api/voting`, {
+      const res = await fetch(`https://votingportal-tv3f.onrender.com/api/voting`, {
         method: "GET", 
         headers: { 
           "Authorization": `Bearer ${token}`,
@@ -55,7 +55,7 @@ const VotingPage = () => {
 
     const token = localStorage.getItem("token");
     try {
-      const res = await fetch("https://votingportal-v8js.onrender.com/api/voting/vote", {
+      const res = await fetch("https://votingportal-tv3f.onrender.com/api/voting/vote", {
         method: "POST",
         headers: { 
           "Content-Type": "application/json",

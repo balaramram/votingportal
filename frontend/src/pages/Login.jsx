@@ -18,7 +18,7 @@ const Login = ({ setIsAuthenticated }) => {
 // Step 1: Initial Login
 const handleInitialLogin = async () => {
   try {
-    const res = await fetch("https://votingportal-v8js.onrender.com/api/auth/user/login", {
+    const res = await fetch("https://votingportal-tv3f.onrender.com/api/auth/user/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData)
