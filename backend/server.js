@@ -44,7 +44,7 @@ app.post("/api/verify-otp",verifyOTP);
 
 // Error handling middleware
 app.use(errorHandler);
-
+app.options("*", cors(corsOptions));
 // Connect to database
 Database();
 
