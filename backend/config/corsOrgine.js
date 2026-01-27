@@ -1,5 +1,9 @@
 const whiteList = [
   "https://votingportal-opal.vercel.app/",
+  "http://localhost:5173",
+  "http://localhost:5174",
+  "null",
+  "http://localhost:5175"
 ];
 
 export const corsOptions = {
