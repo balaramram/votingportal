@@ -1,0 +1,267 @@
+{
+	"info": {
+		"_postman_id": "6fc5878e-5f99-4907-bc3c-4feaadc20b3f",
+		"name": "Voting Portel",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31823394",
+		"_collection_link": "https://tamilloft.postman.co/workspace/TamilLoft-Workspace~6922f3d2-a477-4ba1-8ae6-87db8f4fa541/collection/31823394-6fc5878e-5f99-4907-bc3c-4feaadc20b3f?action=share&source=collection_link&creator=31823394"
+	},
+	"item": [
+		{
+			"name": "Admin Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"admin@college.com\",\r\n  \"password\": \"adminpassword\",\r\n  \"department\": [\"Computer Science\", \"Electronics\",\"all\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/user/admin/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"user",
+						"admin",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Use Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\r\n    \"name\": \"John Doe\",\r\n    \"email\": \"test@college.edu\",\r\n    \"password\": \"userpassword\",\r\n    \"dob\": \"2000-01-01\",\r\n    \"fingerprintData\": \"b6f2c6c8d3f1f0e6f6b0c0a6c9f9c9c1f7bfa6b3d5e2c0a1c9e9d0a7f3b2e1a4\",\r\n    \"department\": \"Computer Science\",\r\n    \"year\": 3,\r\n    \"batch\": \"2020-2024\"\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/user/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Admin Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"admin@college.com\",\r\n  \"password\": \"adminpassword\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/auth/admin/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"admin",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Poling Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Class Representative Election\",\r\n    \"options\": [\"Candidate A\", \"Candidate B\", \"Candidate C\"],\r\n    \"department\": \"Computer Science\",\r\n    \"endDate\": \"2026-01-20T23:59:59Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/voting/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"voting",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get Poling Data",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/voting/results/69637e74a90ce297b69c00a7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"voting",
+						"results",
+						"69637e74a90ce297b69c00a7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\r\n    \"email\": \"test@college.edu\",\r\n    \"password\": \"userpassword\",\r\n    \"fingerprintData\": \"b6f2c6c8d3f1f0e6f6b0c0a6c9f9c9c1f7bfa6b3d5e2c0a1c9e9d0a7f3b2e1a4\"\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/auth/user/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Voting Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\r\n    \"pollId\": \"69637e74a90ce297b69c00a7\",\r\n    \"option\": \"Candidate A\"\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/voting/vote",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"voting",
+						"vote"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "userProjelById",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer ${token}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/user/profile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"user",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
