@@ -30,9 +30,9 @@ const VotingPage = () => {
       if (!token) return;
 
       const res = await fetch(`https://votingportal-backend.onrender.com/api/voting`, {
-        method: "GET", // Kandippa method specify pannunga
+        method: "GET", 
         headers: { 
-          "Authorization": `Bearer ${token}`, // ✨ Idhu dhaan Backend-la req.headers.authorization-ku pogum
+          "Authorization": `Bearer ${token}`,
           "Content-Type": "application/json"
         }
       });
