@@ -12,7 +12,7 @@ const ResultPage = () => {
     const fetchResults = async () => {
       try {
         const token = localStorage.getItem("adminToken") || localStorage.getItem("token");
-        const res = await fetch(`https://votingportal-tv3f.onrender.com/api/voting/results/${pollId}`, {
+        const res = await fetch(`http://localhost:5000/api/voting/results/${pollId}`, {
           headers: { "Authorization": `Bearer ${token}` }
         });
 
